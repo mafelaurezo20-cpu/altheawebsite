@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRAVE</title>
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <link rel="preload" as="image" href="images/logo.png">
+<link rel="preload" as="image" href="images/logo2-.png">
+
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header-container" id="header">
+    <div class="header-left">
+      <img src="images/logo.png" alt="Crave Logo">
+      <img src="images/logo2-.png" alt="Crave Second Logo">
+      <div class="header-text">
+        <h3>CRAVE TECHNOLOGY</h3>
+        <h4>ENTERPRISE SOLUTION</h4>
+      </div>
+    </div>
+    <nav class="navv">
+      <a href="crave.html">Home</a>
+      <a href="about.html"class="active">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <div class="slideshow-container" id="home">
+  
+    <div class="slide fade">
+      <video autoplay muted loop>
+        <source src="videos/video.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="dots" id="dots"></div>
+  </div>
+
+  <!-- About Section -->
+  <section class="about-hero" id="about">
+    <img src="images/aboutt.png" alt="About CRAVE" class="about-image">
+    <div class="overlay"><h1>About Us</h1></div>
+  </section>
+
+  <main class="about-content">
+    <h1 class="section-title">COMPANY INTRODUCTION</h1>
+    <h2 class="section-subtitle">CRAVE stands for</h2>
+
+    <section class="mission-section">
+      <div class="card"><img src="images/2.png" alt="Commitment Icon" class="icon"><h3>Commitment</h3></div>
+      <div class="card"><img src="images/1.png" alt="Resourceful Icon" class="icon"><h3>Resourceful</h3></div>
+      <div class="card"><img src="images/5.png" alt="Action-Oriented Icon" class="icon"><h3>Action-Oriented</h3></div>
+      <div class="card"><img src="images/3.png" alt="Valiant Icon" class="icon"><h3>Valiant</h3></div>
+      <div class="card"><img src="images/4.png" alt="Efficient Icon" class="icon"><h3>Efficient</h3></div>
+    </section>
+
+    <p>
+      <b>CRAVE TECH</b> stands as a premier digital solutions provider in Bacolod City,
+      trusted by businesses, schools, and government units across the Negros Island
+      Region since <i>2012</i>. For more than a decade, we have been committed to 
+      transforming ideas into impactful digital experiences through cutting-edge 
+      technology and innovative services. What began as a company focused on LED 
+      advertising—delivering LED billboards, large-format displays, digital signages,
+      and CCTVs across Negros Occidental—has grown into a comprehensive hub for 
+      digital solutions. Over the years, our expertise has expanded to include
+      software development, allowing us to create customized, efficient, and
+      reliable systems that empower organizations to thrive in an increasingly 
+      digital world. At CRAVE TECH, our mission is simple yet powerful: to bridge
+      technology and creativity in order to meet the evolving needs of our clients
+      and to drive progress throughout the Negros Island Region and beyond.
+    </p>
+
+    <section class="vision">
+      <div class="values">
+        <h3>Our Mission</h3>
+        <p>Crave's single mission is to make our client's businesses stronger by
+          continuously providing the latest and most innovative digital business
+          solutions available.
+        </p>
+      </div>
+      <div class="values">
+        <h3>Our Vision</h3>
+        <p>To be the leader in digital business solutions in Bacolod City
+          and the province of Negros Occidental through creative marketing, 
+          exceeding customer expectations and sustainable growth.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Services Section -->
+  
+  <section class="services-hero" id="services">
+    <img src="images/ako.png" alt="Services" class="services-image">
+    
+  </section>
+ <main class="service-content">
+
+    <!-- Category Modal -->
+    <div id="categoryModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2 id="modalTitle"></h2>
+        <div id="modalProducts" class="modal-products"></div>
+      </div>
+    </div>
+
+    <!-- Product Details Modal -->
+    <div id="productModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeProductModal()">&times;</span>
+        <h2 id="productTitle"></h2>
+        <img id="productImage" src="" alt="" class="big-product-img">
+        <p id="productDesc"></p>
+      </div>
+    </div>
+
+    <section class="services-section" id="services">
+     <div class="services-header">
+  <p>Select a category to explore our products.</p>
+  <input type="text" id="serviceSearch" placeholder="Search a product...">
+</div>
+
+<!-- Search Results Section -->
+<div id="searchResults"></div>
+
+
+
+<div class="categories">
+  <!-- Security & Surveillance -->
+  <div class="category-card" 
+      onclick="openCategory('Security & Surveillance', [
+        { name: 'CCTV & Alarm Security System',   image: 'img/ccttv.webp',
+  description: 'Absolute Security Alarms provides quality camera and video solutions for homes and businesses. Our specialists design reliable surveillance systems tailored to your needs and budget.<br><br><strong>Types:</strong><br>- Dome Camera<br>- Bullet Camera<br>- C-mount Camera<br>- Day/Night Camera<br>- PTZ Camera<br>- Discreet CCTV<br><strong>Optional:</strong> Audio Camera | Wired | Wireless | Drone' }     , 
+        { name: 'Access Control & Door Access', image: 'img/door.png' ,
+  description: 'Door access control systems are digital security systems that ensure authorized access to your building. They ensure only authorized personnel are entering your building while keeping unauthorized personnel out.' }     , 
+        { name: 'Gate Automation', image: 'img/gate.webp' ,
+  description: 'Automatic gates are widely used in residential, commercial, and industrial areas for restricting access. They can be seen in home and business driveways, transportation terminals, delivery docks, mini storage complexes, detention facilities, airports, gated communities, and commercial or industrial manufacturing plants.' }     , 
+        { name: 'Smart Traffic Lights System', image: 'img/traffic.jpg' ,
+  description: 'Smart traffic lights used a variety of technologies to dynamically change traffic signals at intersections in response to real-time traffic patterns and weather conditions. Technology used by smart traffic lights may include: Sensors and cameras that detect volume and velocity of approaching traffic.' }     , 
+        { name: 'Biometric and Interactive Display', image: 'img/55.png' ,
+  description: 'Biometric systems are using personal characteristics (directly linked to who you are) to authenticate or identify a person. A system collects biometric characteristics unique to every person. These biometric characteristics are then directly linked to verify or identify the individual.' }     , 
+        { name: 'Ham Sam Antenna & Repeater Systems', image: 'img/77.png' ,
+  description: 'Han Sam Antenna &  Repeater System since 1990 with proven track record, innovative solutions and steadfast commitment to client success. It has been a prominent figure in the realm of homebrew  Antenna and Repeater Systems and Tactical grade communication monitoring and surveillance.' }     , 
+        { name: 'FDAS (Fire Detection & Alarm)', image: 'img/66.png' ,
+  description: 'A Fire alarm system has a number of devices working together to detect and warn people through visual and audio appliances when smoke, fire, carbon monoxide, or other emergencies are present.' }     , 
+
+      ])">  
+    <img src="images/erika.webp" alt="Security & Surveillance">
+    <h3>Security & Surveillance</h3>
+  </div>
+
+  <!-- Digital Displays & Advertising -->
+  <div class="category-card" 
+      onclick="openCategory('Digital Displays & Advertising', [
+        { name: 'Indoor & Outdoor LED Display', image: 'img/LEDD.jpg' ,
+  description: 'These LED displays varies in thickness and brightness, depending on customer’s needs. Suitable for outdoor display as these displays are weatherproof and can withstand moisture and dust. Up to 27,777 pixels per square meter, display size can be as large as you need it to be.' }     , 
+        { name: 'Smart Signage & Video Wall', image: 'img/SMART.jpg' ,
+  description: 'Promote your business while informing and entertaining customers with a cost effective, simplified TV and digital signage solution.' }     , 
+        { name: ' Electronic Digital and Equipment', image: 'img/8.png' ,
+  description: 'At crave, we provide a wide range of electronic digital and office equipment to meet your communication and productivity needs. Whether you need a laptop, a desktop, a printer, a telephone, a mobile phone, a headset, or any other gadget, we have it all. Our equipment is designed to help you connect with your clients and colleagues, share information quickly and efficiently, and work from anywhere. With crave, you can enjoy the convenience and quality of modern technology without breaking the bank.' }     , 
+        { name: 'Audio & Lighting System', image: 'img/9.png' ,
+  description: 'Sound equipment usually consists of microphones, loudspeakers and amplifiers. Connecting and fine-tuning all of these elements to a sound desk or console requires professionalism, experience and concentration: that’s what makes it so important to have a professional technical team that takes responsibility for the set-up and running of the equipment.' }     , 
+        { name: 'BGM & Public Address', image: 'img/10.png' ,
+  description: 'A BGM based PA system allows the user to broadcast music to all zones and can help in entertaining/addressing the public in the most effective way.' }     , 
+      ])">
+    <img src="images/toink.jpg" alt="Digital Displays & Advertising">
+    <h3>Digital Displays & Advertising</h3>
+  </div>
+
+  <!-- Networking & Communication -->
+  <div class="category-card" 
+      onclick="openCategory('Networking & Communication', [
+        { name: 'Structured Cabling', image: 'img/cabling.webp' ,
+  description: 'Structured Cabling provides a reliable backbone for your network infrastructure, ensuring seamless communication and efficient data transfer. Our specialists design and install organized cabling systems that support voice, data, video, and security solutions with scalability for future growth.' }     ,
+        { name: 'Communication Antenna & Repeater', image: 'img/11.png' ,
+  description: 'Communication Antenna & Repeater solutions enhance wireless coverage and signal strength for reliable communication in homes, offices, and large facilities. Our systems are designed to minimize dead zones and ensure clear, uninterrupted connections for voice and data transmission.' }     ,
+        { name: 'PBX System', image: 'img/pbx.jpg' ,
+  description: 'PBX System provides efficient call management for businesses, connecting internal extensions and external phone lines in one centralized platform. Our solutions improve communication flow, reduce costs, and support advanced features for both small offices and large organizations.' }     ,
+        { name: 'Public WiFi', image: 'img/wi.png' ,
+  description: 'Public Wi-Fi or public networks refer to wireless internet access provided in public areas for free use by the general public.' }     ,
+         { name: 'Packetworx IoT System Integrators', image: 'img/12.png' ,
+  description: 'Packetworx is a Philippine-based social enterprise providing LoRaWAN® connectivity (via packetNET) and long‑battery‑life IoT sensors (packetSERIES and packetSENSE) to enable smart city, agriculture, and industrial monitoring across Metro Manila and nationwide..' }     ,
+      ])">
+    <img src="images/network.jpg" alt="Networking & Communication">
+    <h3>Networking & Communication</h3>
+  </div>
+
+  <!-- Energy & Green Solutions -->
+  <div class="category-card" 
+      onclick="openCategory('Energy & Green Solutions', [
+        { name: 'Solar Powered Lights & Panels', image: 'img/5.png' ,
+  description: 'Solar street lights use solar panels to capture and store energy from the sun, providing high-intensity lighting at night without consuming electricity or incurring monthly fees.' }     ,
+        { name: 'Waste-to-Energy Plant Machine', image: 'img/7.png' ,
+  description: 'Waste-to-Energy Plant Machine converts everyday waste into usable energy, offering a sustainable solution for both waste management and power generation. This system reduces landfill volume, lowers carbon emissions, and produces clean electricity or heat from solid waste.' }     ,
+      ])">
+    <img src="images/energeyy.jpg" alt="Energy & Green Solutions">
+    <h3>Energy & Green Solutions</h3>
+  </div>
+
+  <!-- Software & Business Systems -->
+  <div class="category-card" 
+      onclick="openCategory('Software & Business Systems', [
+        { name: 'Software & Web Development', image: 'img/webb.png' ,
+description: 'We cater customized software and web development solutions tailored to your business needs. From simple websites to complex systems, our team designs and develops scalable, secure, and user-friendly applications that help you achieve efficiency and growth.' }     ,
+        { name: 'POS System  Package BIR ACCREDITED', image: 'img/13.png' ,
+description: 'A point of sale, or point of purchase, is where you ring up customers. When customers check out online, walk up to your checkout counter, or pick out an item from your stand or booth, they are at the point of sale. Your point-of-sale system is the hardware and software that enable your business to make those sales.' }     ,
+        { name: 'Queue System', image: 'img/queue.jpg',
+description: ' A queue management system gathers real-team  data about the service, wait time, and customers. Analytics provided by a queue management system allows to identify key areas the areas that are in need of improvement. Improves business image. The use of queue system boots customer appeal of a business.' }     ,,
+         { name: 'Internet Provider (ILEAD ICT Solutions, Inc.)', image: 'img/ilead.jpg' ,
+description: 'Experience High-Speed Internet Connectivity! Lead a Digital Life with Lead ICT Solutions, Inc.' }     ,
+      
+      ])">
+    <img src="images/yapp.webp" alt="Software & Business Systems">
+    <h3>Software & Business Systems</h3>
+  </div>
+</div>
+
+  </section>
+</main>
+
+
+ <!-- Contact Section -->
+<section id="contact" class="contact-section">
+  <div class="content">
+    <h1>Connect with <span class="highlight">Crave Technology</span></h1>
+
+   <div class="contact-container">
+  <!-- Location -->
+  <div class="contact-item location-box">
+    <h3>Address</h3>
+    <div class="map-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.3348595748055!2d122.95025!3d10.67003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33ae9b865dc663bb%3A0x3f8896889378e27e!2sJS%20Building%2C%20Galo%20-%20Lacson%20Sts.%2C%20Barangay%209%2C%20Bacolod%20City!5e0!3m2!1sen!2sph!4v1618934011227!5m2!1sen!2sph"
+        width="100%"
+        height="350"
+        style="border:0"
+        allowfullscreen=""
+        loading="lazy"
+      ></iframe>
+    </div>
+    <p style="font-weight: bold;">
+      JS Building, Galo - Lacson Sts., Barangay 9, 6100 Bacolod City, Philippines
+    </p>
+  </div>
+
+  <!-- Right side (split into 2 stacked boxes) -->
+  <div class="right-column">
+    <!-- Contact Info -->
+    <div class="contact-item">
+      <h3>Contact Details</h3>
+      <ul class="contact-list">
+        <li><i class="fas fa-phone"></i> <a href="tel:+639166382482">+63 916 638 2482</a></li>
+        <li><i class="fas fa-phone"></i> <a href="tel:+639459667513">+63 945 966 7513</a></li>
+        <li><i class="fas fa-envelope"></i> <a href="mailto:info@cravetechbacolod.com">info@cravetechbacolod.com</a></li>
+        <li><i class="fab fa-facebook"></i> <a href="https://facebook.com/CraveTechSolutions" target="_blank">Crave Technology Enterprise Solutions</a></li>
+      </ul>
+    </div>
+
+    <!-- Inquiry Form -->
+    <div class="contact-item">
+      <h3>Inquiry Form</h3>
+      <form class="inquiry-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Your Contact Number" required>
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+</section>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+  <script>
+    // Auto-scroll to "About" section when this file loads
+    window.addEventListener("load", function() {
+      document.getElementById("about").scrollIntoView({ behavior: "smooth" });
+    });
+  </script>
+</body>
+</html>
